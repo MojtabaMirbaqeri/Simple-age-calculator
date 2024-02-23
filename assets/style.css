@@ -1,0 +1,93 @@
+body {
+  font-family: "Poppins";
+  height: 100dvh;
+  background-color: #f0f0f0;
+}
+
+#calculator-con {
+  width: 90vw;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 1.5rem;
+  border-bottom-right-radius: 7rem;
+}
+
+.date-inputs label {
+  letter-spacing: 3px;
+}
+
+.date-inputs input {
+  transition: all 0.3s ease-in-out;
+}
+
+.date-inputs .requierd-error {
+  display: none;
+  font-size: 0.9rem !important;
+}
+
+.col.requierd-error-show input {
+  border-color: #e33f45 !important;
+}
+
+.col.requierd-error-show input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(253, 41, 13, 0.25);
+}
+
+.date-inputs input::-webkit-outer-spin-button,
+.date-inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calc-button-con::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50);
+}
+
+.calc-button-con button {
+  aspect-ratio: 1/1;
+  background-color: #864cff;
+  border: 0;
+}
+
+.result-con h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.result {
+  color: #864cff;
+}
+
+.past-error.past-error-show {
+  display: block !important;
+}
+
+/* styles in 768px(md size) */
+@media screen and (min-width: 768px) {
+  .calc-button-con {
+    text-align: end !important;
+  }
+  .result-con h1 {
+    font-size: 4.5rem;
+  }
+  .date-inputs input {
+    font-size: 28px;
+  }
+  .calc-button-con::before {
+    height: 4px;
+  }
+  #calculator-con {
+    border-bottom-right-radius: 10rem;
+  }
+  .col.requierd-error-show .requierd-error {
+    display: block;
+  }
+}

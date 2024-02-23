@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body class="d-flex justify-content-center align-items-center">
+    <div id="calculator-con" class="py-5 px-4 px-md-5">
+      <div class="date-inputs row g-3 fw-bold mb-2 row-cols-md-4">
+        <div class="col">
+          <label for="#day-input" class="form-label text-secondary">DAY</label
+          ><input
+            type="number"
+            id="day-input"
+            class="form-control form-control-lg fw-bold date-input"
+            placeholder="DD"
+            min="0"
+            max="31" />
+          <p class="fs-6 fw-lighter text-danger requierd-error mt-1">
+            This field is requierd
+          </p>
+        </div>
+        <div class="col">
+          <label for="#month-input" class="form-label text-secondary">MONTH</label
+          ><input
+            type="number"
+            id="month-input"
+            class="form-control form-control-lg fw-bold date-input"
+            placeholder="MM"
+            min="0"
+            max="12" />
+          <p class="fs-6 fw-lighter text-danger requierd-error mt-1">
+            This field is requierd
+          </p>
+        </div>
+        <div class="col">
+          <label for="#year-input" class="form-label text-secondary">YEAR</label
+          ><input
+            type="number"
+            id="year-input"
+            class="form-control form-control-lg fw-bold date-input"
+            placeholder="YY"
+            min="0" />
+          <p class="fs-6 fw-lighter text-danger requierd-error mt-1">
+            This field is requierd
+          </p>
+        </div>
+      </div>
+      <p class="past-error fs-6 fw-lighter text-danger d-none">
+        Time must be in the past
+      </p>
+      <div class="calc-button-con text-center position-relative py-4">
+        <button
+          class="calc-button btn btn-dark rounded-circle position-relative z-1 p-2 p-md-3">
+          <img src="./assets/images/icon-arrow.svg" alt="" class="w-75" />
+        </button>
+      </div>
+      <div class="result-con">
+        <h1><span class="result year-res">--</span> years</h1>
+        <h1><span class="result month-res">--</span> months</h1>
+        <h1><span class="result day-res">--</span> days</h1>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
